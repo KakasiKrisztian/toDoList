@@ -17,7 +17,11 @@ public class App
         CreateToDoItemRequest createToDoItemRequest = new CreateToDoItemRequest();
         createToDoItemRequest.setDescription("Learn JDBC");
         createToDoItemRequest.setDeadline(LocalDate.now().plusWeeks(1));
+
         ToDoItemRepository toDoItemRepository = new ToDoItemRepository();
-        toDoItemRepository.createToDoItem(createToDoItemRequest);
+       // toDoItemRepository.createToDoItem(createToDoItemRequest);
+        //toDoItemRepository.updateToDoItem(1, true);
+        toDoItemRepository.deleteToDoItem(1);
     }
+
 }
